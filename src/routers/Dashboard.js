@@ -14,7 +14,7 @@ export default function Dashboard() {
           <Route path="/marvel" component={MarvelScreen}></Route>
           <Route path="/dc" component={DcScreen}></Route>
           <Route path="/search" component={SearchScreen}></Route>
-          <Redirect path="/marvel" />
+          <Redirect to="/marvel" />
         </Switch>
       </div>
     </>

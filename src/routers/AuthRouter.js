@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 
 import Dashboard from "./Dashboard";
 import { LoginScreen } from "../pages/LoginScreen";
@@ -9,7 +14,7 @@ export default function AuthRouter() {
     <Router>
       <div>
         <Switch>
-          <Route path="/login" component={LoginScreen}></Route>
+          <Route exact path="/login" component={LoginScreen}></Route>
           <Route path="/" component={Dashboard}></Route>
         </Switch>
       </div>
