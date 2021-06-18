@@ -1,9 +1,10 @@
 import React from "react";
+import AuthRouter from "./routers/AuthRouter";
 
 export const HeroApp = () => {
   return (
-    <div>
-      <h1>heroapp</h1>
-    </div>
+    <>
+      <AuthRouter />
+    </>
   );
 };
