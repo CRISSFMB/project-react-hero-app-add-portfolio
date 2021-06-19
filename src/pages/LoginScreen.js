@@ -6,10 +6,18 @@ export const LoginScreen = ({ history }) => {
   };
   return (
     <section className="hero d-flex justify-content-center align-items-center flex-column">
-      <h1 className="text-white text-center">Willkommen beim Heldenprojekt</h1>
-      <button className="btn custom-btn" onClick={handleLogin}>
-        Enter to project
-      </button>
+      <h1 className="text-white text-center animate__animated animate__fadeInLeft display-2">
+        Willkommen beim Heldenprojekt
+      </h1>
+
+      <div
+        className="wrapper animate__animated animate__bounce"
+        onClick={handleLogin}
+      >
+        <div className="inner">
+          <span></span>
+        </div>
+      </div>
     </section>
   );
 };
