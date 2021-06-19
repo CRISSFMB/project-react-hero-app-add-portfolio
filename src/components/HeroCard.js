@@ -10,8 +10,11 @@ export const HeroCard = ({
   caracters,
 }) => {
   return (
-    <div className="col d-flex flex-column align-items-center">
-      <div className="card mb-3" style={{ width: "15rem" }}>
+    <div className="col d-flex flex-column align-items-center ">
+      <div
+        className="card mb-3 animate__animated animate__fadeIn"
+        style={{ width: "15rem" }}
+      >
         <img
           src={`./assets/images/${id}.jpg`}
           className="card-img-top"
