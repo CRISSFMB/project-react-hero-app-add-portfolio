@@ -5,14 +5,11 @@ export const LoginScreen = ({ history }) => {
     history.push("/");
   };
   return (
-    <div>
-      <h1>LoginScreen</h1>
-
-      <hr />
-
-      <button className="btn btn-primary" onClick={handleLogin}>
+    <section className="hero d-flex justify-content-center align-items-center flex-column">
+      <h1 className="text-white text-center">Willkommen beim Heldenprojekt</h1>
+      <button className="btn custom-btn" onClick={handleLogin}>
         Enter to project
       </button>
-    </div>
+    </section>
   );
 };

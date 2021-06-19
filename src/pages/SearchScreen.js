@@ -2,10 +2,10 @@ import React from "react";
 
 export const SearchScreen = () => {
   return (
-    <div>
-      <h1>SearchScreen</h1>
+    <section className="section">
+      <h2 className=" text-center py-lg-3">SearchScreen</h2>
 
       <hr />
-    </div>
+    </section>
   );
 };

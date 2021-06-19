@@ -10,30 +10,15 @@ export const Navbar = () => {
 
       <div className="navbar-collapse">
         <div className="navbar-nav">
-          <Link
-            activeClassName="active"
-            className="nav-item nav-link"
-            exact
-            to="/marvel"
-          >
+          <Link className="nav-item nav-link" exact to="/marvel">
             Marvel
           </Link>
 
-          <Link
-            activeClassName="active"
-            className="nav-item nav-link"
-            exact
-            to="/dc"
-          >
+          <Link className="nav-item nav-link" exact to="/dc">
             DC
           </Link>
 
-          <Link
-            activeClassName="active"
-            className="nav-item nav-link"
-            exact
-            to="/search"
-          >
+          <Link className="nav-item nav-link" exact to="/search">
             Search
           </Link>
         </div>
@@ -41,12 +26,7 @@ export const Navbar = () => {
 
       <div className="navbar-collapse collapse w-100 order-3 dual-collapse2">
         <ul className="navbar-nav ml-auto">
-          <Link
-            activeClassName="active"
-            className="nav-item nav-link"
-            exact
-            to="/login"
-          >
+          <Link className="nav-item nav-link" exact to="/login">
             Logout
           </Link>
         </ul>
