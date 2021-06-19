@@ -23,7 +23,7 @@ export const HeroCard = ({
         <div className="card-body">
           <h5 className="card-title">{superhero}</h5>
           <p className="card-text">Some quick example text to</p>
-          <Link to="#" className="btn btn-primary">
+          <Link to={`/hero/${id}`} className="btn btn-primary">
             more Details
           </Link>
         </div>
