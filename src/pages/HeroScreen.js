@@ -11,7 +11,7 @@ export const HeroScreen = () => {
     hero;
 
   return (
-    <div className="container border border-dark">
+    <div className="container ">
       <h3 className="text-center display-3">{superhero}</h3>
       <section className="row justify-content-center align-items-center h-100">
         <div className="col-12 d-flex flex-column justify-content-center align-items-lg-start  align-items-md-center">
