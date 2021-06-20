@@ -5,9 +5,10 @@ import { HeroCard } from "./HeroCard";
 export const HeroList = ({ title }) => {
   const marvelData = getHeroesByPublisher(`${title}`);
   return (
-    <section className="cards p-lg-4">
+    <section className="cards">
       <div className="container">
-        <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-1 p-lg-4">
+        <h2 className="text-center my-3">{title}</h2>
+        <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-1">
           {marvelData.map((item) => (
             <HeroCard key={item.id} {...item} />
           ))}

@@ -7,12 +7,12 @@ import { LoginScreen } from "../pages/LoginScreen";
 export default function AuthRouter() {
   return (
     <Router>
-      <div>
+      <>
         <Switch>
           <Route exact path="/hero" component={LoginScreen}></Route>
           <Route path="/" component={Dashboard}></Route>
         </Switch>
-      </div>
+      </>
     </Router>
   );
 }

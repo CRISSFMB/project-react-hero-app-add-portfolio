@@ -3,33 +3,46 @@ import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
-      <Link className="navbar-brand" to="/">
-        Asociaciones
-      </Link>
-
-      <div className="navbar-collapse">
-        <div className="navbar-nav">
-          <Link className="nav-item nav-link" exact to="/marvel">
-            Marvel
-          </Link>
-
-          <Link className="nav-item nav-link" exact to="/dc">
-            DC
-          </Link>
-
-          <Link className="nav-item nav-link" exact to="/search">
-            Search
-          </Link>
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark ">
+      <div className="container-fluid">
+        <Link className="navbar-brand" to="/">
+          HeldenApp
+        </Link>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <Link className="nav-item nav-link" exact to="/marvel">
+                Marvel
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-item nav-link" exact to="/dc">
+                DC
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-item nav-link" exact to="/search">
+                Search
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/hero">
+                Logout
+              </Link>
+            </li>
+          </ul>
         </div>
-      </div>
-
-      <div className="navbar-collapse collapse w-100 order-3 dual-collapse2">
-        <ul className="navbar-nav ml-auto">
-          <Link className="nav-item nav-link" exact to="/hero">
-            Logout
-          </Link>
-        </ul>
       </div>
     </nav>
   );

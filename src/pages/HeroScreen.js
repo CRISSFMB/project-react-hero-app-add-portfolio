@@ -11,26 +11,26 @@ export const HeroScreen = () => {
     hero;
 
   return (
-    <div className="container h-100 align-items-center d-flex ">
-      <div className="row ">
-        <div className="col-12 ">
+    <div className="container border border-dark">
+      <h3 className="text-center display-3">{superhero}</h3>
+      <section className="row justify-content-center align-items-center h-100">
+        <div className="col-12 d-flex flex-column justify-content-center align-items-lg-start  align-items-md-center">
           <div
             className="card mb-3 animate__animated animate__fadeInLeft"
             style={{ maxWidth: "540px" }}
           >
             <div className="row g-0">
-              <div className="col-md-8">
+              <div className="col-md-4">
                 <img
                   src={`../assets/images/${heroId}.jpg`}
                   alt={superhero}
-                  height={"500"}
-                  width={"250"}
-                  //   className="img-fluid"
+                  className="img-fluid d-block mx-auto"
+                  width={"200"}
                 />
               </div>
-              <div className="col-md-4">
+              <div className="col-md-8">
                 <div className="card-body">
-                  <h5 className="card-title">{superhero}</h5>
+                  <h5 className="card-title text-center">{superhero}</h5>
                   <p>{alter_ego}</p>
                   <p>{characters}</p>
                   <p>{first_appearance}</p>
@@ -40,7 +40,7 @@ export const HeroScreen = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 };

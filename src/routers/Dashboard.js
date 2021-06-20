@@ -9,10 +9,10 @@ import { SearchScreen } from "../pages/SearchScreen";
 export default function Dashboard() {
   return (
     <>
-      <header className="custom-navbar">
+      <header>
         <Navbar />
       </header>
-      <main className="vh-100">
+      <>
         <Switch>
           <Route exact path="/marvel" component={MarvelScreen}></Route>
           <Route exact path="/dc" component={DcScreen}></Route>
@@ -20,7 +20,7 @@ export default function Dashboard() {
           <Route exact path="/search" component={SearchScreen}></Route>
           <Redirect to="/marvel" />
         </Switch>
-      </main>
+      </>
     </>
   );
 }

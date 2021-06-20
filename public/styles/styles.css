@@ -8,8 +8,13 @@ body {
   min-height: 10vh;
 }
 
-.section {
-  height: calc(100vh - 10vh);
+.vh-100-10vh {
+  min-height: calc(100vh - 10vh);
+}
+
+.height-custom-img {
+  min-height: 200px;
+  object-fit: cover;
 }
 
 .hero {
