@@ -1,5 +1,6 @@
 import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
+import { Footer } from "../components/Footer";
 import { Navbar } from "../components/Navbar";
 import { DcScreen } from "../pages/DcScreen";
 import { HeroScreen } from "../pages/HeroScreen";
@@ -12,7 +13,8 @@ export default function Dashboard() {
       <header>
         <Navbar />
       </header>
-      <>
+
+      <div className="container">
         <Switch>
           <Route exact path="/marvel" component={MarvelScreen}></Route>
           <Route exact path="/dc" component={DcScreen}></Route>
@@ -20,7 +22,11 @@ export default function Dashboard() {
           <Route exact path="/search" component={SearchScreen}></Route>
           <Redirect to="/marvel" />
         </Switch>
-      </>
+      </div>
+
+      <footer className="container">
+        <Footer />
+      </footer>
     </>
   );
 }

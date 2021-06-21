@@ -22,17 +22,17 @@ export const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link className="nav-item nav-link" exact to="/marvel">
+              <Link className="nav-item nav-link" to="/marvel">
                 MarvelHelden
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-item nav-link" exact to="/dc">
+              <Link className="nav-item nav-link" to="/dc">
                 DCHelden
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-item nav-link" exact to="/search">
+              <Link className="nav-item nav-link" to="/search">
                 Suchen Helden
               </Link>
             </li>
