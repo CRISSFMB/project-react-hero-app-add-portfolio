@@ -11,7 +11,7 @@ export const HeroCard = ({
 }) => {
   return (
     <div
-      className=" mb-3 animate__animated animate__fadeIn"
+      className="animate__animated animate__fadeIn"
       style={{ width: "12rem", height: "32rem" }}
     >
       <div className="height-custom-img">

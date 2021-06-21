@@ -17,8 +17,8 @@ body {
   object-fit: cover;
 }
 
-.marginCustom {
-  margin-top: 10vh;
+.paddingCustom {
+  padding-top: 10vh;
 }
 
 .hero {

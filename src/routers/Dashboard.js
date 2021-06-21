@@ -24,7 +24,7 @@ export default function Dashboard() {
         </Switch>
       </div>
 
-      <footer className="container">
+      <footer className="container-fluid">
         <Footer />
       </footer>
     </>
