@@ -9,12 +9,12 @@ import { SearchScreen } from "../pages/SearchScreen";
 
 export default function Dashboard() {
   return (
-    <>
+    <div className="vh-100">
       <header>
         <Navbar />
       </header>
 
-      <div className="container">
+      <div className="container h-100 d-flex justify-content-center align-content-center">
         <Switch>
           <Route exact path="/marvel" component={MarvelScreen}></Route>
           <Route exact path="/dc" component={DcScreen}></Route>
@@ -23,10 +23,6 @@ export default function Dashboard() {
           <Redirect to="/marvel" />
         </Switch>
       </div>
-
-      <footer className="container-fluid">
-        <Footer />
-      </footer>
-    </>
+    </div>
   );
 }

@@ -4,14 +4,6 @@ body {
   font-family: "Benne", serif;
 }
 
-.custom-navbar {
-  min-height: 10vh;
-}
-
-.vh-100-10vh {
-  min-height: calc(100vh - 10vh);
-}
-
 .height-custom-img {
   min-height: 200px;
   object-fit: cover;
@@ -19,6 +11,10 @@ body {
 
 .paddingCustom {
   padding-top: 10vh;
+}
+
+.navbar-height {
+  min-height: 10vh;
 }
 
 .hero {

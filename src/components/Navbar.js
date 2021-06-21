@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top custom-navbar">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top navbar-height">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
           HeldenApp

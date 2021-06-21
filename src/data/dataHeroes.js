@@ -29,8 +29,7 @@ export const dataHeroes = [
     publisher: "DC Comics",
     alter_ego: "Alan Scott",
     first_appearance: "All-American Comics #16",
-    characters:
-      "Alan Scott, Hal Jordan, Guy Gardner, John Stewart, Kyle Raynor, Jade, Sinestro, Simon Baz",
+    characters: "Alan Scott, Hal Jordan, Guy Gardner",
   },
   {
     id: "dc-arrow",

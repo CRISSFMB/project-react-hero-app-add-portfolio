@@ -2,10 +2,10 @@ import React from "react";
 
 export const SearchScreen = () => {
   return (
-    <section className="row paddingCustom vh-100-10vh">
+    <div className="row paddingCustom ">
       <div className="col">
-        <h2 className=" text-center">SearchScreen</h2>;
+        <h2 className="text-center py-3">SearchScreen</h2>
       </div>
-    </section>
+    </div>
   );
 };

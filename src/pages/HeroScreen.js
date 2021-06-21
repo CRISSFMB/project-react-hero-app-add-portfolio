@@ -11,9 +11,9 @@ export const HeroScreen = () => {
     hero;
 
   return (
-    <section className="row justify-content-center align-items-center vh-100-10vh ">
+    <section className="row justify-content-center align-items-center">
       <h3 className="text-center display-3">{superhero}</h3>
-      <div className="col-12 d-flex flex-column justify-content-center align-items-lg-start  align-items-md-center">
+      <div className="col-12 d-flex flex-column justify-content-center align-items-lg-center  align-items-md-center">
         <div
           className="card mb-3 animate__animated animate__fadeInLeft"
           style={{ maxWidth: "540px" }}

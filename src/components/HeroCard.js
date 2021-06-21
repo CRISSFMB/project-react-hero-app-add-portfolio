@@ -21,7 +21,7 @@ export const HeroCard = ({
           alt={superhero}
         />
       </div>
-      <div className="px-2">
+      <div className="px-2 ">
         <h5>{superhero}</h5>
         {alter_ego === first_apperance ? <p>{alter_ego}</p> : null}
 
