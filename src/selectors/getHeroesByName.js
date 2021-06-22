@@ -1,4 +1,4 @@
-import { dataheroes } from "../data/dataheroes";
+import { dataHeroes } from "../data/dataHeroes";
 
 export const getHeroesByName = (name = "") => {
   if (name === "") {
@@ -6,7 +6,7 @@ export const getHeroesByName = (name = "") => {
   }
 
   name = name.toLocaleLowerCase();
-  return dataheroes.filter((hero) =>
+  return dataHeroes.filter((hero) =>
     hero.superhero.toLocaleLowerCase().includes(name)
   );
 };
