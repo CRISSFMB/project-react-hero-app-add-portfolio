@@ -1,5 +1,5 @@
 import { useForm } from "../hooks/useForm";
-// import { getHeroesByName } from "../selectors/getHeroesByName";
+import { getHeroesByName } from "../selectors/getHeroesByName";
 
 export const SearchScreen = () => {
   //form
