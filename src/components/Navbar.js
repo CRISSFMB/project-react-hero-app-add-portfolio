@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top navbar-height">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark navbar-height">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
           HeldenApp
@@ -33,7 +33,7 @@ export const Navbar = () => {
             </li>
             <li className="nav-item">
               <Link className="nav-item nav-link" to="/search">
-                Suchen Helden
+                Heldensuche
               </Link>
             </li>
             <li className="nav-item">

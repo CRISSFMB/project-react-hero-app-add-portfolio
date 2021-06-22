@@ -1,6 +1,5 @@
 import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
-import { Footer } from "../components/Footer";
 import { Navbar } from "../components/Navbar";
 import { DcScreen } from "../pages/DcScreen";
 import { HeroScreen } from "../pages/HeroScreen";
@@ -9,20 +8,18 @@ import { SearchScreen } from "../pages/SearchScreen";
 
 export default function Dashboard() {
   return (
-    <div className="vh-100">
-      <header>
-        <Navbar />
-      </header>
+    <>
+      <Navbar />
 
-      <div className="container h-100 d-flex justify-content-center align-content-center">
+      <>
         <Switch>
-          <Route exact path="/marvel" component={MarvelScreen}></Route>
-          <Route exact path="/dc" component={DcScreen}></Route>
-          <Route exact path="/hero/:heroId" component={HeroScreen}></Route>
-          <Route exact path="/search" component={SearchScreen}></Route>
+          <Route exact path="/marvel" component={MarvelScreen} />
+          <Route exact path="/dc" component={DcScreen} />
+          <Route exact path="/hero/:heroId" component={HeroScreen} />
+          <Route exact path="/search" component={SearchScreen} />
           <Redirect to="/marvel" />
         </Switch>
-      </div>
-    </div>
+      </>
+    </>
   );
 }
