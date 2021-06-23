@@ -1,10 +1,25 @@
+//hooks
+
+import { useLocation } from "react-router-dom";
 import { useForm } from "../hooks/useForm";
+
+//selectors or helpers
+
 import { getHeroesByName } from "../selectors/getHeroesByName";
 
-export const SearchScreen = () => {
+//package
+
+import queryString from "query-string";
+import { HeroCard } from "../components/HeroCard";
+
+export const SearchScreen = ({ history }) => {
+  const { search } = useLocation();
+
+  const { q = "" } = queryString.parse(search);
+
   //form
   const [valuesInput, handleInputChangeSearch] = useForm({
-    searchText: "",
+    searchText: q,
   });
   const { searchText } = valuesInput;
 
@@ -12,44 +27,54 @@ export const SearchScreen = () => {
 
   const handlesubmit = (e) => {
     e.preventDefault();
-    console.log(searchText);
+    //insert query
+
+    history.push(`?q=${searchText}`);
   };
 
-  // const heroesfiltered = getHeroesByName(value);
+  //heroesfiltered
+
+  const heroesfiltered = getHeroesByName(searchText);
 
   return (
     <div className="container">
-      <h3 className="text-center ">SearchScreen</h3>
+      <h3 className="text-center h1 pt-2">SearchScreen</h3>
       <div className="row">
-        <div className="col-6">
+        <div className="col-12 col-md-6">
           <form onSubmit={handlesubmit}>
             <label htmlFor="search" className="form-label">
-              HeldenSuchen
+              Heldensuche
             </label>
             <input
               type="text"
               className="form-control"
               id="search"
-              placeholder="heldenSuchen"
+              placeholder="Held suchen  z.B. : Hulk "
               name="searchText"
               onChange={handleInputChangeSearch}
               value={searchText}
+              autoComplete="off"
             />
           </form>
         </div>
 
-        <div className="col-6">
-          {/* <div className="card" style={{ width: "18rem" }}>
-            <img
-              src={`../../public/assets/images/${id}.jpg`}
-              className="card-img-top"
-              alt={superhero}
-            />
-            <div className="card-body">
-              <h5 className="card-title">{superhero}</h5>
-              <p className="card-text">Some quick example</p>
+        <div className="col-12 col-md-6">
+          <span className="text-center d-block">Suchergebnisse</span>
+
+          {q === "" && (
+            <div className="text-center bg-info mt-1 p-3">
+              such einen Helden
             </div>
-          </div> */}
+          )}
+          {q !== "" && heroesfiltered.length === 0 && (
+            <div className="text-center bg-info mt-1 bg-danger p-3">
+              Held konnte nicht gefunden werden
+            </div>
+          )}
+
+          {heroesfiltered.map((hero) => (
+            <HeroCard {...hero} key={hero.id} />
+          ))}
         </div>
       </div>
     </div>

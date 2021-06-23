@@ -2,13 +2,17 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { getHeroById } from "../selectors/getHeroById";
 
-export const HeroScreen = () => {
+export const HeroScreen = ({ history }) => {
   const { heroId } = useParams();
 
   const hero = getHeroById(heroId);
 
   const { alter_ego, characters, first_appearance, publisher, superhero } =
     hero;
+
+  const handleReturn = () => {
+    history.goBack();
+  };
 
   return (
     <div className="container-custom d-flex align-content-center align-items-center h-100">
@@ -37,6 +41,9 @@ export const HeroScreen = () => {
                 </div>
               </div>
             </div>
+            <button onClick={handleReturn} className="btn btn-primary">
+              Go back
+            </button>
           </div>
         </div>
       </section>
