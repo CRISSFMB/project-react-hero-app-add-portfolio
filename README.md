@@ -1,3 +1,1 @@
-# Welcome to my project Hero
-
-## Start project with npm start
+## Start project npm start

@@ -26,7 +26,7 @@ export const HeroScreen = ({ history }) => {
             <div className="row g-0">
               <div className="col-md-4">
                 <img
-                  src={`/assets/images/${heroId}.jpg`}
+                  src={`../assets/images/${heroId}.jpg`}
                   alt={superhero}
                   className="img-fluid d-block mx-auto"
                 />
