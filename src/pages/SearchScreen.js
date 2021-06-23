@@ -62,12 +62,12 @@ export const SearchScreen = ({ history }) => {
           <span className="text-center d-block">Suchergebnisse</span>
 
           {q === "" && (
-            <div className="text-center bg-info mt-1 p-3">
+            <div className="text-center bg-info mt-1 p-1">
               such einen Helden
             </div>
           )}
           {q !== "" && heroesfiltered.length === 0 && (
-            <div className="text-center bg-info mt-1 bg-danger p-3">
+            <div className="text-center bg-info mt-1 bg-danger p-1">
               Held konnte nicht gefunden werden
             </div>
           )}
